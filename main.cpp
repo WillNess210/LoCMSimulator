@@ -84,7 +84,7 @@ public:
 		return "PASS";
 	}
 	string getAttackAction() {
-		return "SUMMON 1; SUMMON 2; SUMMON 4; SUMMON 6; USE 3 2; USE 3 4; USE 3 6; USE 5 2; USE 5 4; USE 5 6";
+		return "SUMMON 1; SUMMON 2; SUMMON 3; SUMMON 4; SUMMON 5; SUMMON 6; SUMMON 7; SUMMON 8; SUMMON 9; SUMMON 10; SUMMON 11; SUMMON 12;";
 	}
 };
 class Player {
@@ -443,6 +443,9 @@ public:
 				text.setString(to_string(toDraft[i].defense));
 				text.setPosition(910 + i * 400, 530);
 				window.draw(text);
+				text.setString(toDraft[i].getAbilities());
+				text.setPosition(720 + i * 400, 630);
+				window.draw(text);
 			}
 			// DRAW DRAFTED CARDS
 			sf::Sprite draftedOne = getCardDrafted(players[0].deck.back().cardNumber);
@@ -476,6 +479,9 @@ public:
 					text.setString(to_string(players[j].hand[i].defense));
 					text.setPosition(startX + 115 + i * spaceBetween, ys[j] + 83);
 					window.draw(text);
+					text.setString(players[j].hand[i].getAbilities());
+					text.setPosition(startX + 10 + i * spaceBetween, ys[j] + 140);
+					window.draw(text);
 				}
 			}
 			// BOARD
@@ -501,6 +507,9 @@ public:
 					window.draw(text);
 					text.setString(to_string(players[j].board[i].defense));
 					text.setPosition(startX + 160 + i * spaceBetween, bys[j] + 100);
+					window.draw(text);
+					text.setString(players[j].board[i].getAbilities());
+					text.setPosition(startX + 40 + i * spaceBetween, bys[j] + 170);
 					window.draw(text);
 				}
 			}
@@ -822,7 +831,7 @@ int main() {
 			myGame.render(window);
 			myGame.turnUp();
 			sf::Clock clock;
-			float timeToWait = i < 29 ? 1 : 2;
+			float timeToWait = i < 29 ? 0.1 : 2;
 			while (clock.getElapsedTime().asSeconds() < timeToWait) {
 			}
 		}
