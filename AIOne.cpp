@@ -12,6 +12,18 @@ public:
 		return "PASS";
 	}
 	string getAttackAction() {
-		return "SUMMON 1; SUMMON 2; SUMMON 3; SUMMON 4; SUMMON 5; SUMMON 6; SUMMON 7; SUMMON 8; SUMMON 9; SUMMON 10; SUMMON 11; SUMMON 12;";
+		string toReturn = "SUMMON 1";
+		for (int i = 2; i < 60; i++) {
+			toReturn = toReturn + "; SUMMON " + to_string(i);
+		}
+		for (int i = 1; i < 18; i++) {
+			for (int j = -1; j < 18; j++) {
+				toReturn = toReturn + "; ATTACK " + to_string(i) + " " + to_string(j);
+				if (j == -1) {
+					j++;
+				}
+			}
+		}
+		return toReturn;
 	}
 };
