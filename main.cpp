@@ -80,11 +80,46 @@ public:
 	vector<Card> hand;
 	vector<Card> deck;
 	vector<Card> board;
+	int runes[5] = { 25, 20, 15, 10, 5 };
 	int health, mana, nextCardDraw;
 	Player() {
 		mana = 0;
 		health = 30;
 		nextCardDraw = 0;
+	}
+	void loseNextRune() {
+		int numRunesLeft = 0;
+		bool lostRune = false;
+		for (int i = 0; i < 5 && lostRune == false; i++) {
+			if (runes[i] >= 5) {// must lose this rune
+				lostRune = true;
+				health = runes[i];
+				runes[i] = -100;
+				nextCardDraw++;
+			}
+			if (runes[i] >= 5) {
+				numRunesLeft++;
+			}
+		}
+		if (numRunesLeft == 0 && deck.size() == 0) {
+			health = 0;
+		}
+	}
+	void checkRunes() {
+		int numRunesLeft = 0;
+		for (int i = 0; i < 5; i++) {
+			if (health < runes[i]) {
+				// LOSE THIS RUNE
+				runes[i] = -100;
+				nextCardDraw++;
+			}
+			if (runes[i] >= 5) {
+				numRunesLeft++;
+			}
+		}
+		if (numRunesLeft == 0 && deck.size() == 0) {
+			health = 0;
+		}
 	}
 };
 enum CardType
@@ -569,11 +604,16 @@ public:
 					}
 				}
 				for (int j = 0; j < players[i].nextCardDraw; j++) {
-					if (players[i].hand.size() < 8 && players[i].deck.size() > 0) {
-						int randCard = rand() % players[i].deck.size();
-						players[i].deck[randCard].instanceId = cardIds++;
-						players[i].hand.push_back(players[i].deck[randCard]);
-						players[i].deck.erase(players[i].deck.begin() + randCard);
+					if (players[i].hand.size() < 8) {
+						if (players[i].deck.size() > 0) {
+							int randCard = rand() % players[i].deck.size();
+							players[i].deck[randCard].instanceId = cardIds++;
+							players[i].hand.push_back(players[i].deck[randCard]);
+							players[i].deck.erase(players[i].deck.begin() + randCard);
+						}
+						else {
+							players[i].loseNextRune();
+						}
 					}
 				}
 				players[i].nextCardDraw = 0;
@@ -788,6 +828,10 @@ public:
 				}
 				cout << endl;
 			}
+		}
+		// RUNE STUFF
+		for (int i = 0; i < 2; i++) {
+			players[i].checkRunes();
 		}
 	}
 	void turnUp() {
