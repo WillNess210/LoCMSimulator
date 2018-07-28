@@ -1,0 +1,33 @@
+﻿  main.cpp
+c:\users\willn\documents\visual studio 2017\locm\main.cpp(336): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+c:\users\willn\documents\visual studio 2017\locm\main.cpp(351): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+c:\users\willn\documents\visual studio 2017\locm\main.cpp(366): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+c:\users\willn\documents\visual studio 2017\locm\main.cpp(381): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+c:\users\willn\documents\visual studio 2017\locm\main.cpp(394): warning C4018: '<': signed/unsigned mismatch
+c:\users\willn\documents\visual studio 2017\locm\main.cpp(435): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\willn\documents\visual studio 2017\locm\main.cpp(438): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\willn\documents\visual studio 2017\locm\main.cpp(441): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\willn\documents\visual studio 2017\locm\main.cpp(444): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\willn\documents\visual studio 2017\locm\main.cpp(461): warning C4018: '<': signed/unsigned mismatch
+c:\users\willn\documents\visual studio 2017\locm\main.cpp(463): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\willn\documents\visual studio 2017\locm\main.cpp(467): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\willn\documents\visual studio 2017\locm\main.cpp(471): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\willn\documents\visual studio 2017\locm\main.cpp(474): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\willn\documents\visual studio 2017\locm\main.cpp(477): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\willn\documents\visual studio 2017\locm\main.cpp(487): warning C4018: '<': signed/unsigned mismatch
+c:\users\willn\documents\visual studio 2017\locm\main.cpp(489): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\willn\documents\visual studio 2017\locm\main.cpp(493): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\willn\documents\visual studio 2017\locm\main.cpp(497): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\willn\documents\visual studio 2017\locm\main.cpp(500): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\willn\documents\visual studio 2017\locm\main.cpp(503): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\willn\documents\visual studio 2017\locm\main.cpp(587): warning C4018: '<': signed/unsigned mismatch
+c:\users\willn\documents\visual studio 2017\locm\main.cpp(604): warning C4018: '<': signed/unsigned mismatch
+c:\users\willn\documents\visual studio 2017\locm\main.cpp(618): warning C4018: '<': signed/unsigned mismatch
+c:\users\willn\documents\visual studio 2017\locm\main.cpp(646): warning C4018: '<': signed/unsigned mismatch
+c:\users\willn\documents\visual studio 2017\locm\main.cpp(654): warning C4018: '<': signed/unsigned mismatch
+c:\users\willn\documents\visual studio 2017\locm\main.cpp(699): warning C4018: '<': signed/unsigned mismatch
+c:\users\willn\documents\visual studio 2017\locm\main.cpp(717): warning C4018: '<': signed/unsigned mismatch
+c:\users\willn\documents\visual studio 2017\locm\main.cpp(727): warning C4018: '<': signed/unsigned mismatch
+c:\users\willn\documents\visual studio 2017\locm\main.cpp(803): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+c:\users\willn\documents\visual studio 2017\locm\main.cpp(824): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+  LoCM.vcxproj -> C:\Users\WillN\Documents\Visual Studio 2017\LoCM\build\Debug\LoCM.exe

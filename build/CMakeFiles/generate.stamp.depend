@@ -1,0 +1,29 @@
+# CMake generation dependency list for this directory.
+C:/Program Files (x86)/SFML/lib/cmake/SFML/SFMLConfig.cmake
+C:/Program Files (x86)/SFML/lib/cmake/SFML/SFMLConfigDependencies.cmake
+C:/Program Files (x86)/SFML/lib/cmake/SFML/SFMLConfigVersion.cmake
+C:/Program Files (x86)/SFML/lib/cmake/SFML/SFMLSharedTargets-debug.cmake
+C:/Program Files (x86)/SFML/lib/cmake/SFML/SFMLSharedTargets-release.cmake
+C:/Program Files (x86)/SFML/lib/cmake/SFML/SFMLSharedTargets.cmake
+C:/Program Files/CMake/share/cmake-3.12/Modules/CMakeCInformation.cmake
+C:/Program Files/CMake/share/cmake-3.12/Modules/CMakeCXXInformation.cmake
+C:/Program Files/CMake/share/cmake-3.12/Modules/CMakeCommonLanguageInclude.cmake
+C:/Program Files/CMake/share/cmake-3.12/Modules/CMakeGenericSystem.cmake
+C:/Program Files/CMake/share/cmake-3.12/Modules/CMakeInitializeConfigs.cmake
+C:/Program Files/CMake/share/cmake-3.12/Modules/CMakeLanguageInformation.cmake
+C:/Program Files/CMake/share/cmake-3.12/Modules/CMakeRCInformation.cmake
+C:/Program Files/CMake/share/cmake-3.12/Modules/CMakeSystemSpecificInformation.cmake
+C:/Program Files/CMake/share/cmake-3.12/Modules/CMakeSystemSpecificInitialize.cmake
+C:/Program Files/CMake/share/cmake-3.12/Modules/Compiler/CMakeCommonCompilerMacros.cmake
+C:/Program Files/CMake/share/cmake-3.12/Modules/Compiler/MSVC-C.cmake
+C:/Program Files/CMake/share/cmake-3.12/Modules/Compiler/MSVC-CXX.cmake
+C:/Program Files/CMake/share/cmake-3.12/Modules/Platform/Windows-MSVC-C.cmake
+C:/Program Files/CMake/share/cmake-3.12/Modules/Platform/Windows-MSVC-CXX.cmake
+C:/Program Files/CMake/share/cmake-3.12/Modules/Platform/Windows-MSVC.cmake
+C:/Program Files/CMake/share/cmake-3.12/Modules/Platform/Windows.cmake
+C:/Program Files/CMake/share/cmake-3.12/Modules/Platform/WindowsPaths.cmake
+C:/Users/WillN/Documents/Visual Studio 2017/LoCM/CMakeLists.txt
+C:/Users/WillN/Documents/Visual Studio 2017/LoCM/build/CMakeFiles/3.12.0/CMakeCCompiler.cmake
+C:/Users/WillN/Documents/Visual Studio 2017/LoCM/build/CMakeFiles/3.12.0/CMakeCXXCompiler.cmake
+C:/Users/WillN/Documents/Visual Studio 2017/LoCM/build/CMakeFiles/3.12.0/CMakeRCCompiler.cmake
+C:/Users/WillN/Documents/Visual Studio 2017/LoCM/build/CMakeFiles/3.12.0/CMakeSystem.cmake

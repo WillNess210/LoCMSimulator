@@ -1,0 +1,19 @@
+﻿  Checking Build System
+  CMake is re-running because C:/Users/WillN/Documents/Visual Studio 2017/LoCM/build/CMakeFiles/generate.stamp is out-of-date.
+    the file 'C:/Users/WillN/Documents/Visual Studio 2017/LoCM/CMakeLists.txt'
+    is newer than 'C:/Users/WillN/Documents/Visual Studio 2017/LoCM/build/CMakeFiles/generate.stamp.depend'
+    result='-1'
+  -- Found SFML 2.5.0 in C:/Program Files (x86)/SFML/lib/cmake/SFML
+  CMake Warning (dev) in CMakeLists.txt:
+    No cmake_minimum_required command is present.  A line of code such as
+  
+      cmake_minimum_required(VERSION 3.12)
+  
+    should be added at the top of the file.  The version specified may be lower
+    if you wish to support older CMake versions for this project.  For more
+    information run "cmake --help-policy CMP0000".
+  This warning is for project developers.  Use -Wno-dev to suppress it.
+  
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/WillN/Documents/Visual Studio 2017/LoCM/build
