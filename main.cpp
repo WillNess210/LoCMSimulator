@@ -7,9 +7,9 @@
 #include <cstdlib>
 #include <sstream>
 #include <vector>
+#include "AIOne.cpp"
 
 using namespace std;
-
 class Card {
 public:
 	int cardNumber, instanceId, location, cardType, cost, attack, defense, myhealthChange, opponentHealthChange, cardDraw;
@@ -73,18 +73,6 @@ public:
 			abilities += "-";
 		}
 		return abilities;
-	}
-};
-class AI {
-public:
-	AI() {
-
-	}
-	string getAction() {
-		return "PASS";
-	}
-	string getAttackAction() {
-		return "SUMMON 1; SUMMON 2; SUMMON 3; SUMMON 4; SUMMON 5; SUMMON 6; SUMMON 7; SUMMON 8; SUMMON 9; SUMMON 10; SUMMON 11; SUMMON 12;";
 	}
 };
 class Player {
@@ -671,19 +659,23 @@ public:
 									players[i].board[attackerPos].canAttack = false;
 									// APPLYING ATTACKS TO CARDS and including Ward
 									int extraDmg = players[opInd].board[opponentPos].defense - players[i].board[attackerPos].attack; // will be negative or 0 if opp dies
+									bool defenderShielded = false;
 									if (players[opInd].board[opponentPos].shield) {
+										defenderShielded = true;
 										players[opInd].board[opponentPos].shield = false;
 										extraDmg = 0;
 									}else {
 										players[opInd].board[opponentPos].defense -= players[i].board[attackerPos].attack;
 									}
+									bool attackerShielded = false;
 									if (players[i].board[attackerPos].shield) {
+										attackerShielded = true;
 										players[i].board[attackerPos].shield = false;
 									}else {
 										players[i].board[attackerPos].defense -= players[opInd].board[opponentPos].attack;
 									}
 									// CHECKING FOR DRAIN
-									if (players[i].board[attackerPos].drain) {
+									if (players[i].board[attackerPos].drain && defenderShielded == false) {
 										players[i].health += players[i].board[attackerPos].attack;
 									}
 									// CHECKING FOR DEATHS
@@ -693,12 +685,16 @@ public:
 										if (players[i].board[attackerPos].breakthrough) {
 											players[opInd].health += extraDmg;
 										}
-									}else if (players[i].board[attackerPos].lethal) { // CHECKING FOR LETHAL
+									}else if (players[i].board[attackerPos].lethal && defenderShielded == false) { // CHECKING FOR LETHAL ATTACKER
 										players[opInd].board[opponentPos].defense = 0;
 										players[opInd].board.erase(players[opInd].board.begin() + opponentPos);
 									}
 									if (players[i].board[attackerPos].defense <= 0) {
 										players[i].board.erase(players[i].board.begin() + attackerPos);
+									}
+									else if (players[opInd].board[opponentPos].lethal && attackerShielded == false) { // CHECKING FOR LETHAL DEFENDER
+										players[i].board[attackerPos].defense = 0;
+										players[attackerPos].board.erase(players[attackerPos].board.begin() + attackerPos);
 									}
 									cout << action << ";";
 								}
@@ -769,7 +765,7 @@ public:
 									if (theItem.lethal) {
 										players[indOfPlayer].board[posOfTarget].lethal = true;
 									}
-									if (theItem.ward) {
+									if (theItem.ward && players[indOfPlayer].board[posOfTarget].ward == false) {
 										players[indOfPlayer].board[posOfTarget].ward = true;
 										players[indOfPlayer].board[posOfItem].shield = true;
 									}
@@ -810,6 +806,7 @@ public:
 	}
 };
 int main() {
+	bool showGame = true;
 	srand(time(NULL));
 	cards->loadFromFile("C:/Users/WillN/Documents/Visual Studio 2017/LoCM/resources/cards.png");
 	backs->loadFromFile("C:/Users/WillN/Documents/Visual Studio 2017/LoCM/resources/background.jpg");
@@ -828,13 +825,16 @@ int main() {
 			// TICK
 			myGame.play();
 			// RENDER
-			myGame.render(window);
-			myGame.turnUp();
-			sf::Clock clock;
-			float timeToWait = i < 29 ? 0.1 : 2;
-			while (clock.getElapsedTime().asSeconds() < timeToWait) {
+			if (showGame) {
+				myGame.render(window);
+				sf::Clock clock;
+				float timeToWait = i < 29 ? 0.1 : 2;
+				while (clock.getElapsedTime().asSeconds() < timeToWait) {
+				}
 			}
+			myGame.turnUp();
 		}
+		cout << "Winner: " << myGame.getWinner() + 1 << " Turns: " << myGame.turn << endl;
 	}
 	return 0;
 }
