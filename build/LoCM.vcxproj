@@ -309,7 +309,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="C:\Users\WillN\Documents\Visual Studio 2017\LoCM\main.cpp" />
+    <ClCompile Include="C:\Users\WillN\Documents\Visual Studio 2017\LoCM\sources\main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="C:\Users\WillN\Documents\Visual Studio 2017\LoCM\build\ZERO_CHECK.vcxproj">

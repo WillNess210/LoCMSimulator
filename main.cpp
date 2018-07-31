@@ -1,5 +1,6 @@
 #include <SFML/Graphics.hpp>
 #include <SFML/Window.hpp>
+#include <Windows.h>
 #include <iostream>
 #include <list>
 #include <fstream>
@@ -854,25 +855,29 @@ int main() {
 	srand(time(NULL));
 	cards->loadFromFile("C:/Users/WillN/Documents/Visual Studio 2017/LoCM/resources/cards.png");
 	backs->loadFromFile("C:/Users/WillN/Documents/Visual Studio 2017/LoCM/resources/background.jpg");
+
+	// something like
+	CreateProcess()
+
 	Game myGame = Game();
 	sf::RenderWindow window(sf::VideoMode(1920, 1080), "Legends of Code & Simus");
 	window.setFramerateLimit(60);
 	window.setSize(sf::Vector2u(800, 450));
 	while (window.isOpen()) {
-		sf::Event event;
-		while (window.pollEvent(event)) {
-			if (event.type == sf::Event::Closed) {
-				window.close();
-			}
-		}
 		for (int i = 0; i < 200 && myGame.isOver() == false; i++) {
 			// TICK
 			myGame.play();
 			// RENDER
 			if (showGame) {
-				myGame.render(window);
+				sf::Event event;
+				while (window.pollEvent(event)) {
+					if (event.type == sf::Event::Closed) {
+						window.close();
+					}
+				}
+				myGame.render(window); // i don't think I set up the tick/render up prefrectly since you can't set up the window but it works lol
 				sf::Clock clock;
-				float timeToWait = i < 29 ? 0.1 : 2;
+				float timeToWait = i < 29 ? 1 : 1;
 				while (clock.getElapsedTime().asSeconds() < timeToWait) {
 				}
 			}

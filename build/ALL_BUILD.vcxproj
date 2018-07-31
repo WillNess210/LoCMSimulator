@@ -108,6 +108,14 @@
       <Project>{44F19333-8AC5-3CCE-BE5A-CB097ED4C40E}</Project>
       <Name>ZERO_CHECK</Name>
     </ProjectReference>
+    <ProjectReference Include="C:\Users\WillN\Documents\Visual Studio 2017\LoCM\build\AI.vcxproj">
+      <Project>{CDA7F8AA-BA79-3E2B-BE71-38FD2F1389A6}</Project>
+      <Name>AI</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\WillN\Documents\Visual Studio 2017\LoCM\build\AI_enemy.vcxproj">
+      <Project>{4367BA6F-DB76-335E-9C32-5D3BD3F6B2C8}</Project>
+      <Name>AI_enemy</Name>
+    </ProjectReference>
     <ProjectReference Include="C:\Users\WillN\Documents\Visual Studio 2017\LoCM\build\LoCM.vcxproj">
       <Project>{23CE4FD9-172A-3D75-B358-F8237C6C4AB9}</Project>
       <Name>LoCM</Name>

@@ -1,3 +1,5 @@
 C:/Users/WillN/Documents/Visual Studio 2017/LoCM/build/CMakeFiles/LoCM.dir
+C:/Users/WillN/Documents/Visual Studio 2017/LoCM/build/CMakeFiles/AI.dir
+C:/Users/WillN/Documents/Visual Studio 2017/LoCM/build/CMakeFiles/AI_enemy.dir
 C:/Users/WillN/Documents/Visual Studio 2017/LoCM/build/CMakeFiles/ALL_BUILD.dir
 C:/Users/WillN/Documents/Visual Studio 2017/LoCM/build/CMakeFiles/ZERO_CHECK.dir
